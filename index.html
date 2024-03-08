@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+     
+    <link rel="stylesheet" href="style.css">
+</html>   
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/Portfolio1.png" alt="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">My Works</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p text>Web Developer</p>
+            <h1>HI!, I'm Christian Marcos</h1>
+            <h2>I'm a junior web developer</h2>
+        </div>
+    </div>
+</div>
+<!-- about -->
+<div id="about">
+    <div class="container">
+         <div class="row">
+            <div class="about1">
+                <img src="images/about pic1.png">
+            </div>
+            <div class="about2">
+                <h1 class ="S-Title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas 
+                    accumsan lacus vel facilisis. </p>
+                
+                <div class="T-titles">
+                    <p class="T-links Acts" onclick="opentab('skills')">Skills</p>
+                    <p class="T-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="T-Contents Act" id="skills">
+                <ul>
+                    <li><span>Web Development</span><br>UI/UX</li>
+                    <li><span>HTML</span><br>CSS</li>
+                    <li><span>Photo Editing</span><br>Video editing</li>
+                </ul>
+                </div>
+                <div class="T-Contents" id="education">
+                    <ul>
+                        <li><span>2019-2025</span><br>Western Mindanao State University</li>
+                        <li><span>2016-2018</span><br>Computer Tecnologies Institute</li>  
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+<!--Works-->
+<div class="Works">
+    <div class="container">
+        <h1 class ="Service">My works and Services</h1>
+        <div class="Service-list">
+            <div>
+                <h2>Web Development</h2>
+            <p>awrrerr</p>
+            <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>UI/UX</h2>
+            <p>awrrerr</p>
+            <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>HTML</h2>
+            <p>awrrerr</p>
+            <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>CSS</h2>
+            <p>awrrerr</p>
+            <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Photo Editing</h2>
+            <p>awrrerr</p>
+            <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Video Editing</h2>
+            <p>awrrerr</p>
+            <a href="#">learn more</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+     var Tlinks = document.getElementsByClassName("T-links");
+     var TContents = document.getElementsByClassName("T-Contents");
+     
+     function opentab(Tname){
+        for(Tlink of Tlinks){
+            Tlink.classList.remove("Acts");
+        }
+        for(TContent of TContents){
+            TContent.classList.remove("Act");
+        }
+        event.currentTarget.classList.add("Acts");
+        document.getElementById(Tname).classList.add("Act");
+        
+     }
+
+</script>
+
+</body>
+</html>
